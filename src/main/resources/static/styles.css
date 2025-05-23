@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-left a, .nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.user {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+}
+
+.user:hover {
+    background-color: #f0f0f0;
+}
+
+#user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.book-details {
+    margin-top: 20px;
+}
+.book-details h2 {
+    margin-bottom: 10px;
+}
+.book-details p {
+    margin: 5px 0;
+}
+.order-button {
+    margin-top: 20px;
+}
+
+
+.book {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.book:hover {
+    background-color: #f0f0f0;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    margin: 5px 0;
+}
+.book-item {
+    padding: 5px 10px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+}
+
+
+.order {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.order h3 {
+    margin: 0 0 10px 0;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#register-form {
+  display: none;
+  margin-top: 30px;
+}
+
+#show-register-btn {
+  margin: 20px auto;
+  display: block;
+  background-color: #28a745;
+}
+
+#show-register-btn:hover {
+  background-color: #218838;
+}
+
+
+.actions {
+  margin-top: 20px;
+}
+.actions button {
+  margin-right: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}

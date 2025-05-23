@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Вход и регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="nav-left">
+        <a href="/books.html">Книги</a>
+        <a href="/orders.html">Заказы</a>
+    </div>
+</header>
+
+<main>
+    <h2>Вход</h2>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Имя пользователя" required />
+        <input type="password" id="password" placeholder="Пароль" required />
+        <button type="submit">Войти</button>
+    </form>
+
+    <button id="show-register-btn">Зарегистрироваться</button>
+
+    <form id="register-form">
+        <h2>Регистрация</h2>
+        <input type="text" id="reg-username" placeholder="Имя пользователя" required />
+        <input type="password" id="reg-password" placeholder="Пароль" required />
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</main>
+
+<script>
+    document.getElementById('show-register-btn').addEventListener('click', () => {
+      const form = document.getElementById('register-form');
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+<script src="script_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавить книгу</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="nav-left">
+    <a href="/index.html">Книги</a>
+    <a href="/orders.html">Заказы</a>
+  </div>
+  <div class="nav-right" id="auth-links"></div>
+</header>
+
+<main>
+  <h2>Добавить книгу</h2>
+  <form id="edit-form">
+    <label>Название:</label>
+    <input type="text" id="title" required>
+
+    <label>Автор:</label>
+    <input type="text" id="author" required>
+
+    <label>Цена (руб.):</label>
+    <input type="number" id="price" required>
+
+    <label>Описание:</label>
+    <textarea id="description" rows="5" required></textarea>
+
+    <button type="submit">Сохранить</button>
+  </form>
+</main>
+
+<script src="script_add_book.js"></script>
+</body>
+</html>
