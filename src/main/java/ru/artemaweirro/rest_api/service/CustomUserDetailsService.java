@@ -28,6 +28,12 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
     }
 
+    public UserDetails loadUserById(Long id) throws UsernameNotFoundException {
+        // Ищем пользователя по username
+        return userRepository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with id: " + id));
+    }
+
     // Преобразование роли пользователя в authorities для Spring Security
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Role role) {
         return List.of(new SimpleGrantedAuthority(role.name()));

@@ -1,7 +1,6 @@
 package ru.artemaweirro.rest_api.mappers;
 
 import org.springframework.stereotype.Component;
-import ru.artemaweirro.rest_api.dto.UserDTO;
 import ru.artemaweirro.rest_api.dto.UserInfoDTO;
 import ru.artemaweirro.rest_api.models.Role;
 import ru.artemaweirro.rest_api.models.User;

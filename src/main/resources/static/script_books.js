@@ -95,8 +95,53 @@ function renderAuthLinks() {
     }
 }
 
+async function searchBooksByTitle(title) {
+    try {
+        const response = await fetch(`/api/books/by-title/?title=${encodeURIComponent(title)}`, {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        const list = document.getElementById('book-list');
+        list.innerHTML = '';
+
+        if (response.ok) {
+            const books = await response.json();
+            books.forEach(book => {
+                const div = document.createElement('div');
+                div.className = 'book';
+                div.textContent = book.title;
+                div.onclick = () => {
+                    window.location.href = `/book.html?id=${book.id}`;
+                };
+                list.appendChild(div);
+            });
+        } else {
+            const error = await response.json();
+            list.innerHTML = `<p>${error.error || 'Книги не найдены'}</p>`;
+        }
+    } catch (error) {
+        console.error('Ошибка при поиске книг:', error);
+    }
+}
+
 // Инициализация
 document.addEventListener('DOMContentLoaded', () => {
     fetchBooks();
     renderAuthLinks();
+
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+
+    if (searchButton && searchInput) {
+        searchButton.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                searchBooksByTitle(query);
+            } else {
+                fetchBooks(); // если поле пустое — загрузить все книги
+            }
+        });
+    }
 });

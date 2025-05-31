@@ -1,4 +1,4 @@
-package ru.artemaweirro.rest_api.service;
+package ru.artemaweirro.rest_api.initialization;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -8,12 +8,12 @@ import ru.artemaweirro.rest_api.models.Role;
 import ru.artemaweirro.rest_api.repositories.UserRepository;
 
 @Component
-public class InitAuthor implements CommandLineRunner {
+public class InitAdmin implements CommandLineRunner {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public InitAuthor(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public InitAdmin(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
@@ -27,7 +27,7 @@ public class InitAuthor implements CommandLineRunner {
             admin.setRole(Role.ADMIN);
 
             userRepository.save(admin);
-            System.out.println("Автор создан!");
+            System.out.println("Администратор создан!");
         }
     }
 }

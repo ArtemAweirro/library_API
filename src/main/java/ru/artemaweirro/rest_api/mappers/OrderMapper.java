@@ -1,7 +1,6 @@
 package ru.artemaweirro.rest_api.mappers;
 
 import org.springframework.stereotype.Component;
-import ru.artemaweirro.rest_api.dto.BookDTO;
 import ru.artemaweirro.rest_api.dto.OrderDTO;
 import ru.artemaweirro.rest_api.dto.OrderInfoDTO;
 import ru.artemaweirro.rest_api.models.Book;
