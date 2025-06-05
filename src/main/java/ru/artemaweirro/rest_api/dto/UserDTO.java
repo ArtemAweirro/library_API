@@ -2,7 +2,6 @@ package ru.artemaweirro.rest_api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-import ru.artemaweirro.rest_api.models.Role;
 
 
 @Getter

@@ -8,14 +8,12 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.artemaweirro.rest_api.dto.UserDTO;
 import ru.artemaweirro.rest_api.dto.UserInfoDTO;
 import ru.artemaweirro.rest_api.mappers.UserMapper;
 import ru.artemaweirro.rest_api.models.User;
 import ru.artemaweirro.rest_api.repositories.UserRepository;
 
 import java.security.Principal;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

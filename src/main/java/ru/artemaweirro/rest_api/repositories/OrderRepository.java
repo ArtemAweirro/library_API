@@ -1,6 +1,5 @@
 package ru.artemaweirro.rest_api.repositories;
 
-import ru.artemaweirro.rest_api.models.Book;
 import ru.artemaweirro.rest_api.models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
